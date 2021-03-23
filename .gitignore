@@ -131,3 +131,12 @@ dmypy.json
 # swap file
 *.swp
 *un~
+
+# other
+*vim*
+*vs*
+*json
+.python*
+*bash*
+.theano/
+.*/
