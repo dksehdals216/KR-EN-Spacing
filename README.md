@@ -20,13 +20,16 @@ data processing:
 ```./prepare_data.sh```
 
 model training & generation: (under ~/mod_nmt_pytorc/nmt_pytorch/)
-`train_enkr.sh`
+
+```train_enkr.sh```
 
 model testing: (under ~/mod_nmt_pytorc/nmt_pytorch/)
-`test_enkr.sh`
+
+```test_enkr.sh```
 
 detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)
-`nmt_post.sh
+
+```nmt_post.sh```
 
 #### Spaced  
 
