@@ -5,8 +5,40 @@
 Bidirectional LSTM-CRF NMT system with Korean spacing in KR-EN, EN-KR
 translation
 
+## Project Tree
+  * backup
+  * data
+  * nmt_pytorch
+  * mod_nmt_pytorch
+  * spacer
 
 ## Usage
+### (EN - KR)
+#### Original 
+data processing:
+
+```./prepare_data.sh```
+
+model training & generation: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+`train_enkr.sh`
+
+model testing: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+`test_enkr.sh`
+
+detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+`nmt_post.sh
+
+#### Spaced  
+
+
+### (EN - KR)
+
+#### Original 
+
+#### Spaced 
+
+
+
 
 ## Models
 
