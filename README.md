@@ -15,28 +15,53 @@ translation
 ## Usage
 ### (EN - KR)
 #### Original 
-data processing:
+__data processing:__
 
 ```./prepare_data.sh```
 
-model training & generation: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+__model training & generation: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
 
 ```train_enkr.sh```
 
-model testing: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+__model testing: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
 
 ```test_enkr.sh```
 
-detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)
+__detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
 
 ```nmt_post.sh```
 
 #### Spaced  
 
+__data processing:__
 
-### (EN - KR)
+```~/spacer/prep_enkr_space.sh```
+```~/spacer/main.py```
+```~/text_data_gen/post_enkr_space.sh```
+
+
+### (KR - EN)
 
 #### Original 
+__data processing:__
+
+```~/nmt_pytorch/prep_kren_orig.sh```
+
+__model training: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
+
+Edit DATA_DIR Variable inside ~/nmt_pytorch/train_kren.sh to: 
+Data/kr-en/processed/original_data
+
+```~/nmt_pytorch/train_kren.sh ```
+
+__model testing: (under ~/mod_nmt_pytorc/nmt_pytorch/)__****
+
+Edit DATA_DIR Variable inside ~/nmt_pytorch/trans_kren.sh to:
+Data/kr-en/processed/original_data
+
+```~/nmt_pytorch/trans_kren.sh```
+
+
 
 #### Spaced 
 
