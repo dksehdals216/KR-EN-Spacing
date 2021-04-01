@@ -4,6 +4,8 @@
 ## Introduction
 KR-EN EN-KR NMT System with Bidirectional LSTMCRF Korean Spacing
 
+![alt text](https://github.com/dksehdals216/KR-EN-Spacing/images/1234.PNG "bilstm crf")
+
 ## Project Tree
   * backup
   * data
@@ -93,6 +95,8 @@ __model testing:__
 ## Models
 
 ## Performance
+
+![alt text](https://github.com/dksehdals216/KR-EN-Spacing/images/acc_loss.PNG "acc, loss graph")
 
 ### Training
 * Vocab size :  4280
