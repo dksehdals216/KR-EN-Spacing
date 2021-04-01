@@ -4,6 +4,9 @@
 ## Introduction
 KR-EN EN-KR NMT System with Bidirectional LSTM+CRF Korean Spacing
 
+We use a BiLSTM with an added CRF mechanism to incorporate korean spacing into NMT, while achieving better results
+using the [AiHub dataset](https://aihub.or.kr/).
+
 ![](https://github.com/dksehdals216/KR-EN-Spacing/blob/main/images/1234.PNG "bilstm crf")
 
 ## Project Tree
@@ -42,9 +45,11 @@ __data processing:__
 ```~/text_data_gen/post_enkr_space.sh```
 
 __train__:
+
 ```~/mod_nmt_pytorch/nmt_pytorch/train_enkr.sh```
 
-__model_testing:__:
+__model_testing:__
+
 ```~/mod_nmt_pytorch/nmt_pytorch/trans_enkr_space.sh```
 
 __detokenize: (Change src and tgt accordingly)__
@@ -98,7 +103,20 @@ __model testing:__
 
 ![](https://github.com/dksehdals216/KR-EN-Spacing/blob/main/images/acc_loss.PNG "acc, loss graph")
 
-### Training
+
+|       EN-KR translation       | Bleu          |
+| ------------------------------|:-------------:| 
+| original                      | 17.26         |
+| spacing (pre-processed)       | 17.29         |  
+| spacing (post-processed)      | 13.61         |    
+
+|       KR-EN translation       | Bleu          |
+| ------------------------------|:-------------:| 
+| original                      | 34.2          |
+| spacingg                      | 34            |  
+
+
+### Parameters used
 * Vocab size :  4280
 * Embedding dim :  32
 * Hidden dim : 64 * 2
