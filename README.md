@@ -2,8 +2,7 @@
 # KR-EN-Spacing
 
 ## Introduction
-Bidirectional LSTM-CRF NMT system with Korean spacing in KR-EN, EN-KR
-translation
+KR-EN EN-KR NMT System with Bidirectional LSTMCRF Korean Spacing
 
 ## Project Tree
   * backup
@@ -13,8 +12,9 @@ translation
   * spacer
 
 ## Usage
-### (EN - KR)
-#### Original 
+### EN - KR
+
+### For Original 
 __data processing:__
 
 ```./prepare_data.sh```
@@ -31,7 +31,7 @@ __detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
 
 ```nmt_post.sh```
 
-#### Spaced  
+### For Spaced  
 
 __data processing:__
 
@@ -51,9 +51,9 @@ __detokenize: (Change src and tgt accordingly)__
 
 
 
-### (KR - EN)
+### KR - EN
 
-#### Original 
+### For Original 
 __data processing:__
 
 ```~/nmt_pytorch/prep_kren_orig.sh```
@@ -72,8 +72,9 @@ Data/kr-en/processed/original_data
 
 ```~/nmt_pytorch/trans_kren.sh```
 
-#### Spaced 
+### For Spaced 
 __data processing:__
+
 in ```~/spacer/config.py```
 set variable test_data as:
 ```~/data/kr-en/processed/spacing_data/aihub.train.kr```
@@ -82,12 +83,27 @@ set variable test_data as:
 ```~/text_gen_data/post_kren_space.sh```
 
 __model training:__
+
 ```~/nmt_pytorch/train_spaced_kren.sh```
 
 __model testing:__
+
 ```~/nmt_pytorch/trans_space_kren.sh```
 
 ## Models
+
+## Performance
+
+### Training
+* Vocab size :  4280
+* Embedding dim :  32
+* Hidden dim : 64 * 2
+* Optimzer : Adam (3e-4)
+* Batch size : 512
+* Loss function : BCEWithLogitsLoss
+
+### Testing
+
 
 ## Author
 In no particular order:
@@ -98,4 +114,8 @@ In no particular order:
 * Youngpyo Kim (menstoo9504@gmail.com)
 
 ## Reference
+[Tokenization as the initial phase in NLP](https://dl.acm.org/doi/pdf/10.3115/992424.992434)
 
+[Bidirectional LSTM-CRF models for sequence tagging](https://arxiv.org/pdf/1508.01991.pdf)
+
+[Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
