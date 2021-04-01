@@ -17,9 +17,8 @@ using the [AiHub dataset](https://aihub.or.kr/).
   * spacer
 
 ## Usage
-### EN - KR
+### EN-KR Original 
 
-### For Original 
 __data processing:__
 
 ```./prepare_data.sh```
@@ -36,7 +35,7 @@ __detokenize: (under ~/mod_nmt_pytorc/nmt_pytorch/)__
 
 ```nmt_post.sh```
 
-### For Spaced  
+### EN-KR Spaced  
 
 __data processing:__
 
@@ -58,9 +57,7 @@ __detokenize: (Change src and tgt accordingly)__
 
 
 
-### KR - EN
-
-### For Original 
+### KR-EN Original 
 __data processing:__
 
 ```~/nmt_pytorch/prep_kren_orig.sh```
@@ -79,7 +76,7 @@ Data/kr-en/processed/original_data
 
 ```~/nmt_pytorch/trans_kren.sh```
 
-### For Spaced 
+### KR-EN SPaced
 __data processing:__
 
 in ```~/spacer/config.py```
