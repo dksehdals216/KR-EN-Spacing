@@ -39,6 +39,17 @@ __data processing:__
 ```~/spacer/main.py```
 ```~/text_data_gen/post_enkr_space.sh```
 
+__train__:
+```~/mod_nmt_pytorch/nmt_pytorch/train_enkr.sh```
+
+__model_testing:__:
+```~/mod_nmt_pytorch/nmt_pytorch/trans_enkr_space.sh```
+
+__detokenize: (Change src and tgt accordingly)__
+
+```~/mod_nmt_pytorch/nmt_pytorch/nmt_post.sh```
+
+
 
 ### (KR - EN)
 
@@ -61,12 +72,20 @@ Data/kr-en/processed/original_data
 
 ```~/nmt_pytorch/trans_kren.sh```
 
-
-
 #### Spaced 
+__data processing:__
+in ```~/spacer/config.py```
+set variable test_data as:
+```~/data/kr-en/processed/spacing_data/aihub.train.kr```
 
+```~/spacer/main.py```
+```~/text_gen_data/post_kren_space.sh```
 
+__model training:__
+```~/nmt_pytorch/train_spaced_kren.sh```
 
+__model testing:__
+```~/nmt_pytorch/trans_space_kren.sh```
 
 ## Models
 
